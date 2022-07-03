@@ -1,6 +1,8 @@
 let collapses = document.querySelectorAll('.collapse')
 let dropsContent = document.querySelectorAll('.drop-content')
-
+let grayPattern = document.querySelector('.gray-pattern')
+let menuBtn = document.querySelector('.menu')
+let nav = document.querySelector('.navbar')
 
 function removerTodosDropsAtivos() {
     collapses.forEach((e) => {
@@ -20,13 +22,24 @@ for(let i = 0; i < collapses.length; i++) {
 }
 
 let elementosQuePodemClicar = [...dropsContent, ...collapses]
-    .forEach((item) => outrosElementos.push(item.children))
-
-let outrosElementos = []
+    .map(el => el.children[0])
 
 document.addEventListener('click', (e) => {
-    outrosElementos.forEach((item) => {
-        console.log(item.className)
-        if(e.target.classList.contains(item.className)) removerTodosDropsAtivos()
-    })
+    console.log(e.target)
+    if(!elementosQuePodemClicar.includes(e.target)) removerTodosDropsAtivos()
 })
+
+function fecharNav() {
+    nav.classList.remove('active')
+    grayPattern.classList.remove('active')
+    menuBtn.classList.remove('active')
+}
+
+menuBtn.addEventListener('click', (e) => {
+    if(menuBtn.classList.contains('active')) return fecharNav()
+    menuBtn.classList.add('active')
+    nav.classList.add('active')
+    grayPattern.classList.add('active')
+})
+
+grayPattern.addEventListener('click', fecharNav)
