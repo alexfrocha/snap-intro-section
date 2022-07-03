@@ -11,11 +11,11 @@
   
   <nav class="nav">
     <a href="#" class="company-brand"><img class="company-logo" src="./images/logo.svg" alt="" srcset=""></a>
-    <div class="navbar">
+    <div class="navbar desktop">
       <ul class="navbar-list">
-        <li class="navbar-item">
-          <span>Projetos</span>
-          <div class="drop-content">
+        <li class="navbar-item collapse">
+          <span class="item-name">Projetos<div class="drop-item-icon"></div></span>
+          <div class="drop-content none">
             <ul class="drop-list">
               <li class="drop-item"><img src="./images/icon-todo.svg" class="drop-icon" alt="" srcset=""> Todo List</li>
               <li class="drop-item"><img src="./images/icon-calendar.svg" class="drop-icon" alt="" srcset=""> Calendário</li>
@@ -24,31 +24,33 @@
             </ul>
           </div>
         </li>
-        <li class="navbar-item">
-          <span>Empresa</span>
+        <li class="navbar-item collapse">
+          <span class="item-name">Empresa<div class="drop-item-icon"></div></span>
           <div class="drop-content">
             <ul class="drop-list">
               <li class="drop-item">História</li>
-              <li class="drop-item">Nossa Equipe</li>
+              <li class="drop-item">Equipe</li>
               <li class="drop-item">Blog</li>
             </ul>
           </div>
         </li>
-        <li class="navbar-item">Carreiras</li>
-        <li class="navbar-item">Sobre</li>
+        <li class="navbar-item"><span class="item-name">Carreiras</span></li>
+        <li class="navbar-item"><span class="item-name">Sobre</span></li>
       </ul>
       <div class="navbar-sign">
         <button class="navbar-login-btn">Entrar</button>
         <button class="navbar-register-btn">Criar Conta</button>
       </div>
     </div>
+    <div class="menu mobile"></div>
   </nav>
 
   <section class="intro">
-    <div class="intro-image"></div>
+    <img src="./images/image-hero-desktop.png" class="intro-image desktop" alt="">
+    <img src="./images/image-hero-mobile.png" class="intro-image mobile" alt="">
     <div class="intro-content">
       <h1 class="intro-title">Trabalhe em casa</h1>
-      <p class="intro-text">Mantenha sua equipe sincronizada, independentemente da sua localização. Agilize os processos, crie rituais de equipe e observe a produtividade soa</p>
+      <p class="intro-text">Mantenha sua equipe sincronizada, independentemente da sua localização. Agilize os processos, crie rituais de equipe e observe como a produtividade soa</p>
       <button class="intro-btn">Saiba mais</button>
       <div class="intro-partners">
         <img src="./images/client-databiz.svg" class="intro-partner" alt="">
@@ -58,6 +60,6 @@
       </div>
     </div>
   </section>
-
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>
